@@ -1,5 +1,6 @@
 package com.example.kamal.sensorlist;
 
+import android.support.v7.app.ActionBar;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.grad));
 
         listView =(ListView)findViewById(R.id.listview1);
         liststring=new ArrayList<String>();
